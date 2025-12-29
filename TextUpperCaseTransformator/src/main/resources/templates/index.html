@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Uppercase Converter</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container">
+    <h1 th:text="${pageTitle}"></h1>
+
+    <form action="/" method="post" th:object="${textTransformerDTO}">
+        <div class="input-group">
+            <label for="inputText">Enter your text:</label>
+            <textarea id="inputText" placeholder="Type something..." th:field="*{text}"></textarea>
+        </div>
+        <button type="submit" class="convert-btn">Convert text to uppercase</button>
+    </form>
+
+    <div class="output">
+        <h2>Converted Text:</h2>
+        <p th:text="${transformedText}"></p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* Základné nastavenie tela */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Hlavný kontajner */
+.container {
+    background: #ffffffdd;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    max-width: 600px;
+    width: 90%;
+    margin-top: 60px;
+    text-align: center;
+}
+
+/* Nadpis */
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Input group */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.input-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Tlačidlo */
+.convert-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #4facfe;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.convert-btn:hover {
+    background-color: #00f2fe;
+}
+
+/* Výsledok */
+.output {
+    background-color: #f1f5f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    word-break: break-word;
+}
+
+.output h2 {
+    margin-top: 0;
+    color: #333;
+}
