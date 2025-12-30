@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- THYMELEAF -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -8,11 +9,14 @@
 </head>
 <body>
 <div class="container">
+    <!-- SEM VLOŽÍME NADPIS --->
     <h1 th:text="${pageTitle}"></h1>
 
+    <!-- Tu bude DTO objekt --->
     <form action="/" method="post" th:object="${textTransformerDTO}">
         <div class="input-group">
             <label for="inputText">Enter your text:</label>
+            <!-- Z TOHTO ELEMENTU NAČÍTAME ATRIBÚT TEXT NÁŠHO DTO OBJEKTU--->
             <textarea id="inputText" placeholder="Type something..." th:field="*{text}"></textarea>
         </div>
         <button type="submit" class="convert-btn">Convert text to uppercase</button>
@@ -20,6 +24,7 @@
 
     <div class="output">
         <h2>Converted Text:</h2>
+        <!-- TU VLOŽÍME FINÁLNY TEXT --->
         <p th:text="${transformedText}"></p>
     </div>
 </div>
