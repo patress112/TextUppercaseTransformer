@@ -6,7 +6,7 @@ public class TextTransformerDTO {
     // Atribúty
     private String text;
 
-    // Konštruktor - trieda musí mať bezparametrický konštruktor
+    // Konštruktor - trieda musí mať bezparametrický konštruktor, aby Java mohla vytvoriť DTO inštanciu
     public TextTransformerDTO() {};
 
     // Gettery a settery

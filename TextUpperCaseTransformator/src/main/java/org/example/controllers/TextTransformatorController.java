@@ -55,7 +55,7 @@ public class TextTransformatorController {
         // Vytvoríme si nakoniec do šablóny aj premennú s finálnym textom
         model.addAttribute("transformedText", transformedText);
 
-        // Napokon vrátime šablónu
+        // Napokon vrátime šablónu s dosadenými hodnotami cez model
         return "index";
     }
 

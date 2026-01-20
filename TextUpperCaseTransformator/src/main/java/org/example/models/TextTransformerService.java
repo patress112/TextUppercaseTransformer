@@ -3,7 +3,7 @@ package org.example.models;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
-// Táto trieda obsahuje biznis logiku aplikácie
+// Táto trieda obsahuje biznis logiku aplikácie, napr výpočty atď
 // Označíme ju anotáciou @Service
 @Service
 public class TextTransformerService {
@@ -13,7 +13,7 @@ public class TextTransformerService {
     /**
      * Vytvoríme metódu na transformáciu textu
      * Metóda prjme ako argument obsah DTO prepravky
-     * V modeli nepotrebujeme používať @ModelAttribute pri DTO, to len v controlleri
+     * V modeli nepotrebujeme používať @ModelAttribute pri DTO, to využívame LEN V CONTROLLERI
      * @param text
      * @return
      */
