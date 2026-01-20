@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
-// Toto je controller trieda, obsluhujúca URL endpointy. Jej úloha je vracať HTML šablóny, prípadne najprv pomocou service tried vykonať nejaké výpočty / úlohy, výsledoky dosadiť do HTML šablóny a napokon kompletnú šablónu vrátiť
+// Toto je controller trieda, obsluhujúca URL endpointy. Jej úloha je vracať HTML šablóny, prípadne najprv pomocou service tried vykonať nejaké výpočty, úlohy, výsledky dosadiť do HTML šablóny a napokon kompletnú šablónu vrátiť
+// Controller musíme VŽDY označiť anotáciou @Controller
 @Controller
 public class TextTransformatorController {
 
     // Pre používanie service metód si do atribútov pridáme service inštanciu a označíme ju anotáciou @Autowired
+    // Pomocou @Autowired hovoríme Springu, že nám má automaticky vytvoriť danú inštanciu, nemusíme ju vytvárať pomocou new()
     @Autowired
     private TextTransformerService textService;
 
@@ -38,7 +40,7 @@ public class TextTransformatorController {
      * Táto metóda obsluhuje odoslanie formulára
      * Vložíme do jej argumentov Model a aj DTO
      * Keďže sme v controlleri, musíme pri DTO použiť anotáciu @ModelAttribute
-     *
+     *KK
      * @param model
      * @param text
      * @return

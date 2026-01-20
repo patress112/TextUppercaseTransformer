@@ -15,7 +15,8 @@
     <form action="/" method="post" th:object="${textTransformerDTO}">
         <div class="input-group">
             <label for="inputText">Enter your text:</label>
-            <!-- Z TOHTO ELEMENTU NAČÍTAME ATRIBÚT TEXT NÁŠHO DTO OBJEKTU--->
+            <!-- Z TOHTO ELEMENTU NAČÍTAME ATRIBÚT TEXT NÁŠHO DTO OBJEKTU -->
+            <!-- Nemusíme k atribútu text pristupovať cez textTranformerDTO.text, ale kedže objekt textTransformerDTO sme definovali v našom form elemente, tak tu sa už odkazujeme na jeho konkrétne vlastnosti iba pomocou hviezdičky, v našom prípade pomocou th:field ="*{text}" -->
             <textarea id="inputText" placeholder="Type something..." th:field="*{text}"></textarea>
         </div>
         <button type="submit" class="convert-btn">Convert text to uppercase</button>
